@@ -1,0 +1,205 @@
+{
+  "courses": [
+    {
+      "slug": "html",
+      "filename": "html-guide.md",
+      "title": "HTML5 Professional",
+      "tagline": "Master semantic markup, accessibility, and modern HTML5",
+      "category": "frontend",
+      "difficulty": "beginner",
+      "tags": [
+        "html",
+        "semantic",
+        "accessibility",
+        "seo",
+        "forms"
+      ],
+      "icon": "🌐",
+      "color": "#E34F26",
+      "gradient": "from-orange-600 to-red-500",
+      "prerequisites": [],
+      "relatedCourses": [
+        "css",
+        "javascript"
+      ],
+      "author": "Internal",
+      "version": "1.0.0",
+      "id": "html",
+      "totalSections": 15,
+      "totalReadingMinutes": 15,
+      "chapterCount": 6,
+      "sectionCount": 15,
+      "updatedAt": "2026-06-10T10:12:42.082Z"
+    },
+    {
+      "slug": "css",
+      "filename": "css-guide.md",
+      "title": "CSS Professional",
+      "tagline": "Flexbox, Grid, animations, and modern CSS architecture",
+      "category": "frontend",
+      "difficulty": "beginner",
+      "tags": [
+        "css",
+        "flexbox",
+        "grid",
+        "responsive",
+        "animations"
+      ],
+      "icon": "🎨",
+      "color": "#264DE4",
+      "gradient": "from-blue-600 to-indigo-500",
+      "prerequisites": [
+        "html"
+      ],
+      "relatedCourses": [
+        "html",
+        "javascript"
+      ],
+      "author": "Internal",
+      "version": "1.0.0",
+      "id": "css",
+      "totalSections": 9,
+      "totalReadingMinutes": 9,
+      "chapterCount": 6,
+      "sectionCount": 9,
+      "updatedAt": "2026-06-10T10:12:42.089Z"
+    },
+    {
+      "slug": "javascript",
+      "filename": "javascript-guide.md",
+      "title": "JavaScript Professional",
+      "tagline": "Modern ES2024 JavaScript from fundamentals to mastery",
+      "category": "language",
+      "difficulty": "intermediate",
+      "tags": [
+        "javascript",
+        "es6",
+        "async",
+        "dom",
+        "modules"
+      ],
+      "icon": "⚡",
+      "color": "#F7DF1E",
+      "gradient": "from-yellow-500 to-amber-400",
+      "prerequisites": [
+        "html",
+        "css"
+      ],
+      "relatedCourses": [
+        "jquery",
+        "html",
+        "css"
+      ],
+      "author": "Internal",
+      "version": "1.0.0",
+      "id": "javascript",
+      "totalSections": 11,
+      "totalReadingMinutes": 11,
+      "chapterCount": 7,
+      "sectionCount": 11,
+      "updatedAt": "2026-06-10T10:12:42.094Z"
+    },
+    {
+      "slug": "jquery",
+      "filename": "jquery-guide.md",
+      "title": "jQuery Professional",
+      "tagline": "Master jQuery for legacy codebases and WordPress development",
+      "category": "frontend",
+      "difficulty": "intermediate",
+      "tags": [
+        "jquery",
+        "dom",
+        "ajax",
+        "legacy",
+        "plugins"
+      ],
+      "icon": "🔮",
+      "color": "#0769AD",
+      "gradient": "from-blue-700 to-cyan-600",
+      "prerequisites": [
+        "javascript"
+      ],
+      "relatedCourses": [
+        "javascript",
+        "html",
+        "css"
+      ],
+      "author": "Internal",
+      "version": "1.0.0",
+      "id": "jquery",
+      "totalSections": 9,
+      "totalReadingMinutes": 9,
+      "chapterCount": 7,
+      "sectionCount": 9,
+      "updatedAt": "2026-06-10T10:12:42.099Z"
+    },
+    {
+      "slug": "php",
+      "filename": "php-guide.md",
+      "title": "PHP Professional",
+      "tagline": "Modern PHP 8.3 — OOP, security, and best practices",
+      "category": "backend",
+      "difficulty": "intermediate",
+      "tags": [
+        "php",
+        "oop",
+        "security",
+        "pdo",
+        "composer"
+      ],
+      "icon": "🐘",
+      "color": "#8892BE",
+      "gradient": "from-purple-600 to-violet-500",
+      "prerequisites": [
+        "html"
+      ],
+      "relatedCourses": [
+        "laravel",
+        "html"
+      ],
+      "author": "Internal",
+      "version": "1.0.0",
+      "id": "php",
+      "totalSections": 10,
+      "totalReadingMinutes": 10,
+      "chapterCount": 6,
+      "sectionCount": 10,
+      "updatedAt": "2026-06-10T10:12:42.105Z"
+    },
+    {
+      "slug": "laravel",
+      "filename": "laravel-guide.md",
+      "title": "Laravel Professional",
+      "tagline": "Build production-grade applications with Laravel 11",
+      "category": "framework",
+      "difficulty": "advanced",
+      "tags": [
+        "laravel",
+        "php",
+        "eloquent",
+        "api",
+        "queues"
+      ],
+      "icon": "🚀",
+      "color": "#FF2D20",
+      "gradient": "from-red-600 to-orange-500",
+      "prerequisites": [
+        "php"
+      ],
+      "relatedCourses": [
+        "php",
+        "javascript"
+      ],
+      "author": "Internal",
+      "version": "1.0.0",
+      "id": "laravel",
+      "totalSections": 10,
+      "totalReadingMinutes": 10,
+      "chapterCount": 7,
+      "sectionCount": 10,
+      "updatedAt": "2026-06-10T10:12:42.110Z"
+    }
+  ],
+  "generatedAt": "2026-06-10T10:12:42.113Z",
+  "version": "1.0.0"
+}

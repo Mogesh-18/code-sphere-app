@@ -1,0 +1,73 @@
+{
+  "id": "chapter-5",
+  "slug": "chapter-5-5-security",
+  "title": "5. Security",
+  "order": 5,
+  "sections": [
+    {
+      "id": "chapter-5-5-security-s2",
+      "slug": "passwords",
+      "title": "Passwords",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Passwords",
+          "id": "passwords"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// Hashing\n$hash = password_hash($password, PASSWORD_BCRYPT, ['cost' => 12]);\n\n// Verification\nif (!password_verify($input, $hash)) {\n    throw new AuthException('Invalid credentials');\n}"
+        }
+      ],
+      "toc": [
+        {
+          "id": "passwords",
+          "text": "Passwords",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    },
+    {
+      "id": "chapter-5-5-security-s3",
+      "slug": "xss-prevention",
+      "title": "XSS Prevention",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "XSS Prevention",
+          "id": "xss-prevention"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// Escape all user output\necho htmlspecialchars($userInput, ENT_QUOTES | ENT_HTML5, 'UTF-8');\n\n// Helper function\nfunction e(string $value): string {\n    return htmlspecialchars($value, ENT_QUOTES | ENT_HTML5, 'UTF-8');\n}"
+        }
+      ],
+      "toc": [
+        {
+          "id": "xss-prevention",
+          "text": "XSS Prevention",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 2
+}

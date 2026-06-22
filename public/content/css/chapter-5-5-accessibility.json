@@ -1,0 +1,41 @@
+{
+  "id": "chapter-5",
+  "slug": "chapter-5-5-accessibility",
+  "title": "5. Accessibility",
+  "order": 5,
+  "sections": [
+    {
+      "id": "chapter-5-5-accessibility-s2",
+      "slug": "focus-indicators",
+      "title": "Focus Indicators",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Focus Indicators",
+          "id": "focus-indicators"
+        },
+        {
+          "type": "code",
+          "language": "css",
+          "code": ":focus { outline: none; }\n:focus-visible {\n  outline: 3px solid #3b82f6;\n  outline-offset: 3px;\n}"
+        }
+      ],
+      "toc": [
+        {
+          "id": "focus-indicators",
+          "text": "Focus Indicators",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "css"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

@@ -1,0 +1,28 @@
+{
+  "id": "chapter-4",
+  "slug": "chapter-4-4-bem-methodology",
+  "title": "4. BEM Methodology",
+  "order": 4,
+  "sections": [
+    {
+      "id": "chapter-4-4-bem-methodology-s1",
+      "slug": "4-bem-methodology",
+      "title": "4. BEM Methodology",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "css",
+          "code": ".card { }\n.card__title { }\n.card--featured { }"
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "css"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

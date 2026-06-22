@@ -1,0 +1,43 @@
+{
+  "id": "chapter-1",
+  "slug": "chapter-1-1-introduction",
+  "title": "1. Introduction",
+  "order": 1,
+  "sections": [
+    {
+      "id": "chapter-1-1-introduction-s2",
+      "slug": "what-php-is",
+      "title": "What PHP Is",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "What PHP Is",
+          "id": "what-php-is"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "PHP is a server-side scripting language powering ~77% of all websites. Modern PHP 8.3 supports union types, enums, fibers, and JIT compilation."
+            }
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "what-php-is",
+          "text": "What PHP Is",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": false,
+      "codeLanguages": []
+    }
+  ],
+  "totalReadingMinutes": 1
+}

@@ -1,0 +1,28 @@
+{
+  "id": "chapter-4",
+  "slug": "chapter-4-4-array-methods",
+  "title": "4. Array Methods",
+  "order": 4,
+  "sections": [
+    {
+      "id": "chapter-4-4-array-methods-s1",
+      "slug": "4-array-methods",
+      "title": "4. Array Methods",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "const products = [\n  { id: 1, name: 'Laptop', price: 45000, active: true },\n  { id: 2, name: 'Monitor', price: 18000, active: false },\n];\n\n// map — transform\nconst names = products.map(p => p.name);\n\n// filter — select\nconst active = products.filter(p => p.active);\n\n// reduce — accumulate\nconst total = products.reduce((sum, p) => sum + p.price, 0);\n\n// find — first match\nconst laptop = products.find(p => p.id === 1);\n\n// some / every\nconst hasExpensive = products.some(p => p.price > 40000);\nconst allNamed = products.every(p => p.name);"
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

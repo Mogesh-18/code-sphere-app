@@ -1,0 +1,28 @@
+{
+  "id": "chapter-6",
+  "slug": "chapter-6-6-error-handling",
+  "title": "6. Error Handling",
+  "order": 6,
+  "sections": [
+    {
+      "id": "chapter-6-6-error-handling-s1",
+      "slug": "6-error-handling",
+      "title": "6. Error Handling",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "php",
+          "code": "<?php\nclass ValidationException extends RuntimeException {\n    public function __construct(private array $errors) {\n        parent::__construct('Validation failed');\n    }\n    public function getErrors(): array { return $this->errors; }\n}\n\nfunction processOrder(array $data): array {\n    try {\n        $validated = validate($data);\n        $order = createOrder($validated);\n        return ['success' => true, 'orderId' => $order->getId()];\n    } catch (ValidationException $e) {\n        return ['success' => false, 'errors' => $e->getErrors()];\n    } catch (\\Throwable $e) {\n        logError($e);\n        throw $e;\n    }\n}"
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

@@ -1,0 +1,159 @@
+{
+  "id": "chapter-6",
+  "slug": "chapter-6-6-seo-guidelines",
+  "title": "6. SEO Guidelines",
+  "order": 6,
+  "sections": [
+    {
+      "id": "chapter-6-6-seo-guidelines-s2",
+      "slug": "title-tag",
+      "title": "Title Tag",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Title Tag",
+          "id": "title-tag"
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<!-- Format: Primary keyword — Brand Name -->\n<title>Frontend Developer Guide — DevLearn</title>"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Rules:"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Maximum 60 characters."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Every page must have a unique title."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Include the primary keyword near the beginning."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "title-tag",
+          "text": "Title Tag",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "html"
+      ]
+    },
+    {
+      "id": "chapter-6-6-seo-guidelines-s3",
+      "slug": "meta-description",
+      "title": "Meta Description",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Meta Description",
+          "id": "meta-description"
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<meta\n  name=\"description\"\n  content=\"Complete HTML5 guide covering semantic markup, accessibility, forms, and production standards.\"\n/>"
+        }
+      ],
+      "toc": [
+        {
+          "id": "meta-description",
+          "text": "Meta Description",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "html"
+      ]
+    },
+    {
+      "id": "chapter-6-6-seo-guidelines-s4",
+      "slug": "structured-data",
+      "title": "Structured Data",
+      "order": 4,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Structured Data",
+          "id": "structured-data"
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"HTML5 Professional Guide\",\n  \"author\": { \"@type\": \"Person\", \"name\": \"DevLearn\" }\n}\n</script>"
+        }
+      ],
+      "toc": [
+        {
+          "id": "structured-data",
+          "text": "Structured Data",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "html"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 3
+}

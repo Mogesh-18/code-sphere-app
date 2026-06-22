@@ -1,0 +1,57 @@
+{
+  "id": "chapter-4",
+  "slug": "chapter-4-4-database-pdo",
+  "title": "4. Database (PDO)",
+  "order": 4,
+  "sections": [
+    {
+      "id": "chapter-4-4-database-pdo-s1",
+      "slug": "4-database-pdo",
+      "title": "4. Database (PDO)",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "php",
+          "code": "$stmt = $db->prepare('SELECT * FROM users WHERE id = :id');\n$stmt->execute(['id' => $id]);\n$user = $stmt->fetch();"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "prepare()",
+              "Compiles SQL with placeholders"
+            ],
+            [
+              "execute()",
+              "Binds values and runs query"
+            ],
+            [
+              "fetch()",
+              "Gets one row"
+            ],
+            [
+              "fetchAll()",
+              "Gets all rows"
+            ]
+          ],
+          "align": [
+            null,
+            null
+          ]
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

@@ -1,0 +1,28 @@
+{
+  "id": "chapter-7",
+  "slug": "chapter-7-7-migration-to-vanilla-js",
+  "title": "7. Migration to Vanilla JS",
+  "order": 7,
+  "sections": [
+    {
+      "id": "chapter-7-7-migration-to-vanilla-js-s1",
+      "slug": "7-migration-to-vanilla-js",
+      "title": "7. Migration to Vanilla JS",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// jQuery  → Vanilla\n$('#id')           → document.getElementById('id')\n$('.cls')          → document.querySelector('.cls')\n$el.text(str)      → el.textContent = str\n$el.addClass('x')  → el.classList.add('x')\n$.get(url, fn)     → fetch(url).then(r=>r.json()).then(fn)\n$el.on('click',fn) → el.addEventListener('click', fn)"
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

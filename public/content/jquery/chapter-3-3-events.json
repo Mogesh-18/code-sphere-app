@@ -1,0 +1,28 @@
+{
+  "id": "chapter-3",
+  "slug": "chapter-3-3-events",
+  "title": "3. Events",
+  "order": 3,
+  "sections": [
+    {
+      "id": "chapter-3-3-events-s1",
+      "slug": "3-events",
+      "title": "3. Events",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Correct: use .on()\n$('#btn').on('click', function(event) {\n  event.preventDefault();\n  handleClick($(this));\n});\n\n// Event delegation — handles dynamic elements\n$('#list').on('click', '.item', function() {\n  const id = $(this).data('id');\n  loadItem(id);\n});\n\n// Namespaced events — removable\n$('#modal').on('keydown.modal', handleKey);\n$('#modal').off('keydown.modal');"
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

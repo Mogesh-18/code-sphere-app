@@ -1,0 +1,73 @@
+{
+  "id": "chapter-2",
+  "slug": "chapter-2-2-core-concepts",
+  "title": "2. Core Concepts",
+  "order": 2,
+  "sections": [
+    {
+      "id": "chapter-2-2-core-concepts-s2",
+      "slug": "directory-structure",
+      "title": "Directory Structure",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Directory Structure",
+          "id": "directory-structure"
+        },
+        {
+          "type": "code",
+          "language": "text",
+          "code": "app/\n├── Http/Controllers/\n├── Http/Requests/     ← Validation\n├── Http/Resources/    ← API responses\n├── Models/\n├── Services/          ← Business logic\nroutes/\n├── web.php\n├── api.php\ndatabase/migrations/"
+        }
+      ],
+      "toc": [
+        {
+          "id": "directory-structure",
+          "text": "Directory Structure",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "text"
+      ]
+    },
+    {
+      "id": "chapter-2-2-core-concepts-s3",
+      "slug": "routing",
+      "title": "Routing",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Routing",
+          "id": "routing"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// Resource routes\nRoute::apiResource('products', ProductController::class);\n\n// Grouped routes\nRoute::prefix('api/v1')\n     ->middleware(['auth:sanctum'])\n     ->group(function() {\n         Route::apiResource('orders', OrderController::class);\n     });\n\n// Route model binding\nRoute::get('/products/{product:slug}', [ProductController::class, 'show']);"
+        }
+      ],
+      "toc": [
+        {
+          "id": "routing",
+          "text": "Routing",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 2
+}

@@ -1,0 +1,28 @@
+{
+  "id": "chapter-6",
+  "slug": "chapter-6-6-queues",
+  "title": "6. Queues",
+  "order": 6,
+  "sections": [
+    {
+      "id": "chapter-6-6-queues-s1",
+      "slug": "6-queues",
+      "title": "6. Queues",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "php",
+          "code": "class SendOrderConfirmation implements ShouldQueue {\n    use Dispatchable, InteractsWithQueue, Queueable;\n\n    public int $tries   = 3;\n    public int $timeout = 60;\n\n    public function __construct(private readonly Order $order) {}\n\n    public function handle(MailService $mail): void {\n        $mail->sendConfirmation($this->order->user, $this->order);\n    }\n\n    public function failed(\\Throwable $e): void {\n        Log::error('Mail failed', ['order' => $this->order->id, 'error' => $e->getMessage()]);\n    }\n}\n\n// Dispatch\nSendOrderConfirmation::dispatch($order)->onQueue('emails');"
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

@@ -1,6 +1,6 @@
 
 import Link from 'next/link'
-import { CheckCircle2, Brain, MessageSquare } from 'lucide-react'
+import { CheckCircle2, Brain, MessageSquare, Lock } from 'lucide-react'
 
 export function AIPromo() {
     return (

@@ -1,0 +1,28 @@
+{
+  "id": "chapter-4",
+  "slug": "chapter-4-4-ajax",
+  "title": "4. AJAX",
+  "order": 4,
+  "sections": [
+    {
+      "id": "chapter-4-4-ajax-s1",
+      "slug": "4-ajax",
+      "title": "4. AJAX",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "$.ajax({\n  url: '/api/products',\n  method: 'GET',\n  data: { page: 1 },\n  dataType: 'json',\n})\n.done(data => renderProducts(data))\n.fail(jqXHR => showError(jqXHR.responseJSON?.message))\n.always(() => hideLoader());\n\n// CSRF setup\n$.ajaxSetup({\n  headers: {\n    'X-CSRF-Token': $('meta[name=\"csrf-token\"]').attr('content')\n  }\n});"
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

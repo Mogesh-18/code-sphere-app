@@ -1,0 +1,86 @@
+{
+  "id": "chapter-6",
+  "slug": "chapter-6-6-performance",
+  "title": "6. Performance",
+  "order": 6,
+  "sections": [
+    {
+      "id": "chapter-6-6-performance-s1",
+      "slug": "6-performance",
+      "title": "6. Performance",
+      "order": 1,
+      "content": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Animate only GPU-composited properties: "
+            },
+            {
+              "type": "code",
+              "value": "transform"
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "code",
+              "value": "opacity"
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "code",
+              "value": "filter"
+            },
+            {
+              "type": "text",
+              "value": ".\nAvoid animating "
+            },
+            {
+              "type": "code",
+              "value": "width"
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "code",
+              "value": "height"
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "code",
+              "value": "top"
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "code",
+              "value": "left"
+            },
+            {
+              "type": "text",
+              "value": "."
+            }
+          ]
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": false,
+      "codeLanguages": []
+    }
+  ],
+  "totalReadingMinutes": 1
+}

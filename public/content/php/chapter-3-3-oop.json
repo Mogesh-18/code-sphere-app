@@ -1,0 +1,73 @@
+{
+  "id": "chapter-3",
+  "slug": "chapter-3-3-oop",
+  "title": "3. OOP",
+  "order": 3,
+  "sections": [
+    {
+      "id": "chapter-3-3-oop-s2",
+      "slug": "classes",
+      "title": "Classes",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Classes",
+          "id": "classes"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "<?php\nclass Product {\n    public function __construct(\n        private readonly int    $id,\n        private string          $name,\n        private float           $price,\n    ) {}\n\n    public function getId(): int    { return $this->id; }\n    public function getName(): string { return $this->name; }\n\n    public function applyDiscount(float $rate): self {\n        $this->price = round($this->price * (1 - $rate), 2);\n        return $this;\n    }\n\n    public function toArray(): array {\n        return ['id' => $this->id, 'name' => $this->name, 'price' => $this->price];\n    }\n}"
+        }
+      ],
+      "toc": [
+        {
+          "id": "classes",
+          "text": "Classes",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    },
+    {
+      "id": "chapter-3-3-oop-s3",
+      "slug": "enums-php-81",
+      "title": "Enums (PHP 8.1+)",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Enums (PHP 8.1+)",
+          "id": "enums-php-81"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "enum OrderStatus: string {\n    case Pending   = 'pending';\n    case Confirmed = 'confirmed';\n    case Shipped   = 'shipped';\n\n    public function label(): string {\n        return match($this) {\n            self::Pending   => 'Pending Review',\n            self::Confirmed => 'Order Confirmed',\n            self::Shipped   => 'Shipped',\n        };\n    }\n}\n\n$status = OrderStatus::from('pending');\necho $status->label(); // \"Pending Review\""
+        }
+      ],
+      "toc": [
+        {
+          "id": "enums-php-81",
+          "text": "Enums (PHP 8.1+)",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 2
+}

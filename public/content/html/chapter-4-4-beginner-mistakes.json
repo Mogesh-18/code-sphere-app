@@ -1,0 +1,191 @@
+{
+  "id": "chapter-4",
+  "slug": "chapter-4-4-beginner-mistakes",
+  "title": "4. Beginner Mistakes",
+  "order": 4,
+  "sections": [
+    {
+      "id": "chapter-4-4-beginner-mistakes-s2",
+      "slug": "mistake-1-missing-alt-text",
+      "title": "Mistake 1: Missing Alt Text",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Mistake 1: Missing Alt Text",
+          "id": "mistake-1-missing-alt-text"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Wrong Way"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<img src=\"photo.jpg\" />\n<img src=\"logo.png\" alt=\"logo\" />"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Correct Way"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<img src=\"photo.jpg\" alt=\"Team photo at the annual company retreat\" />\n<img src=\"logo.png\" alt=\"Acme Corporation — Home\" />\n<!-- Decorative image: -->\n<img src=\"divider.png\" alt=\"\" role=\"presentation\" />"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Why It Matters"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\nMissing alt text is a Level A WCAG violation. Screen readers cannot describe images without it."
+            }
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "mistake-1-missing-alt-text",
+          "text": "Mistake 1: Missing Alt Text",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "html"
+      ]
+    },
+    {
+      "id": "chapter-4-4-beginner-mistakes-s3",
+      "slug": "mistake-2-using-divs-for-everything",
+      "title": "Mistake 2: Using Divs for Everything",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Mistake 2: Using Divs for Everything",
+          "id": "mistake-2-using-divs-for-everything"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Wrong Way"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<div class=\"header\">\n  <div class=\"nav\">\n    <div onclick=\"location='/'\">Home</div>\n  </div>\n</div>"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Correct Way"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<header>\n  <nav>\n    <ul>\n      <li><a href=\"/\">Home</a></li>\n    </ul>\n  </nav>\n</header>"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Why It Matters"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\nScreen readers announce landmark elements by name. "
+            },
+            {
+              "type": "code",
+              "value": "<nav>"
+            },
+            {
+              "type": "text",
+              "value": " is announced as \"navigation\". "
+            },
+            {
+              "type": "code",
+              "value": "<div class=\"nav\">"
+            },
+            {
+              "type": "text",
+              "value": " is announced as nothing."
+            }
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "mistake-2-using-divs-for-everything",
+          "text": "Mistake 2: Using Divs for Everything",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "html"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 2
+}

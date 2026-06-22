@@ -1,0 +1,1022 @@
+{
+  "slug": "html",
+  "filename": "html-guide.md",
+  "title": "HTML5 Professional",
+  "tagline": "Master semantic markup, accessibility, and modern HTML5",
+  "category": "frontend",
+  "difficulty": "beginner",
+  "tags": [
+    "html",
+    "semantic",
+    "accessibility",
+    "seo",
+    "forms"
+  ],
+  "icon": "🌐",
+  "color": "#E34F26",
+  "gradient": "from-orange-600 to-red-500",
+  "prerequisites": [],
+  "relatedCourses": [
+    "css",
+    "javascript"
+  ],
+  "author": "Internal",
+  "version": "1.0.0",
+  "id": "html",
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "slug": "chapter-1-1-introduction",
+      "title": "1. Introduction",
+      "order": 1,
+      "sections": [
+        {
+          "id": "chapter-1-1-introduction-s2",
+          "slug": "what-html-is",
+          "title": "What HTML Is",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "What HTML Is",
+              "id": "what-html-is"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "HTML (HyperText Markup Language) is the standard markup language used to create the structure and content of web pages. It is not a programming language — it defines what content is and what role it plays."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Every web page on the internet is built on HTML. React renders HTML. Vue renders HTML. Angular renders HTML."
+                }
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "what-html-is",
+              "text": "What HTML Is",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": false,
+          "codeLanguages": []
+        },
+        {
+          "id": "chapter-1-1-introduction-s3",
+          "slug": "why-companies-use-html",
+          "title": "Why Companies Use HTML",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Why Companies Use HTML",
+              "id": "why-companies-use-html"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "HTML is the non-negotiable foundation of all web development. The browser only understands HTML, CSS, and JavaScript."
+                }
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "why-companies-use-html",
+              "text": "Why Companies Use HTML",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": false,
+          "codeLanguages": []
+        }
+      ],
+      "totalReadingMinutes": 2
+    },
+    {
+      "id": "chapter-2",
+      "slug": "chapter-2-2-core-fundamentals",
+      "title": "2. Core Fundamentals",
+      "order": 2,
+      "sections": [
+        {
+          "id": "chapter-2-2-core-fundamentals-s2",
+          "slug": "document-structure",
+          "title": "Document Structure",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Document Structure",
+              "id": "document-structure"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Every HTML document follows a required base structure:"
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Page Title</title>\n  </head>\n  <body>\n    <!-- visible content -->\n  </body>\n</html>"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "code",
+                      "value": "<!DOCTYPE html>"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " — Tells the browser to render in standards mode."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "code",
+                      "value": "<html lang=\"en\">"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " — The "
+                },
+                {
+                  "type": "code",
+                  "value": "lang"
+                },
+                {
+                  "type": "text",
+                  "value": " attribute is mandatory. It informs screen readers which language to use."
+                }
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "document-structure",
+              "text": "Document Structure",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "html"
+          ]
+        },
+        {
+          "id": "chapter-2-2-core-fundamentals-s3",
+          "slug": "semantic-html",
+          "title": "Semantic HTML",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Semantic HTML",
+              "id": "semantic-html"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Semantic HTML means using elements that convey meaning about the content they contain."
+                }
+              ]
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Element",
+                "Purpose",
+                "Use When"
+              ],
+              "rows": [
+                [
+                  "<header>",
+                  "Page or section header",
+                  "Top of page or section"
+                ],
+                [
+                  "<nav>",
+                  "Navigation links",
+                  "Main menu, breadcrumbs"
+                ],
+                [
+                  "<main>",
+                  "Primary content",
+                  "Once per page"
+                ],
+                [
+                  "<article>",
+                  "Self-contained content",
+                  "Blog posts, cards"
+                ],
+                [
+                  "<section>",
+                  "Themed grouping",
+                  "Chapter-like divisions"
+                ],
+                [
+                  "<aside>",
+                  "Supplementary content",
+                  "Sidebars, callouts"
+                ],
+                [
+                  "<footer>",
+                  "Closing content",
+                  "Bottom of page or section"
+                ]
+              ],
+              "align": [
+                null,
+                null,
+                null
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "semantic-html",
+              "text": "Semantic HTML",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": false,
+          "codeLanguages": []
+        },
+        {
+          "id": "chapter-2-2-core-fundamentals-s4",
+          "slug": "headings",
+          "title": "Headings",
+          "order": 4,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Headings",
+              "id": "headings"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Headings establish document outline and hierarchy:"
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<h1>Main Page Topic</h1>\n  <h2>Major Section</h2>\n    <h3>Sub-section</h3>"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Rules:"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                {
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Use only one "
+                        },
+                        {
+                          "type": "code",
+                          "value": "<h1>"
+                        },
+                        {
+                          "type": "text",
+                          "value": " per page."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Never skip heading levels."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Use headings for structure, never for styling."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "headings",
+              "text": "Headings",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "html"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 3
+    },
+    {
+      "id": "chapter-3",
+      "slug": "chapter-3-3-forms",
+      "title": "3. Forms",
+      "order": 3,
+      "sections": [
+        {
+          "id": "chapter-3-3-forms-s2",
+          "slug": "basic-form-structure",
+          "title": "Basic Form Structure",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Basic Form Structure",
+              "id": "basic-form-structure"
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<form action=\"/submit\" method=\"POST\" novalidate>\n  <div class=\"form-group\">\n    <label for=\"full-name\">Full Name *</label>\n    <input\n      type=\"text\"\n      id=\"full-name\"\n      name=\"fullName\"\n      autocomplete=\"name\"\n      required\n      aria-required=\"true\"\n    />\n  </div>\n  <button type=\"submit\">Submit</button>\n</form>"
+            }
+          ],
+          "toc": [
+            {
+              "id": "basic-form-structure",
+              "text": "Basic Form Structure",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "html"
+          ]
+        },
+        {
+          "id": "chapter-3-3-forms-s3",
+          "slug": "input-types",
+          "title": "Input Types",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Input Types",
+              "id": "input-types"
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<input type=\"text\" />        <!-- General text -->\n<input type=\"email\" />       <!-- Email address -->\n<input type=\"password\" />    <!-- Password (masked) -->\n<input type=\"tel\" />         <!-- Phone number -->\n<input type=\"date\" />        <!-- Date picker -->\n<input type=\"checkbox\" />    <!-- Checkbox -->\n<input type=\"radio\" />       <!-- Radio button -->\n<input type=\"hidden\" />      <!-- Hidden value -->"
+            }
+          ],
+          "toc": [
+            {
+              "id": "input-types",
+              "text": "Input Types",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "html"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 2
+    },
+    {
+      "id": "chapter-4",
+      "slug": "chapter-4-4-beginner-mistakes",
+      "title": "4. Beginner Mistakes",
+      "order": 4,
+      "sections": [
+        {
+          "id": "chapter-4-4-beginner-mistakes-s2",
+          "slug": "mistake-1-missing-alt-text",
+          "title": "Mistake 1: Missing Alt Text",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Mistake 1: Missing Alt Text",
+              "id": "mistake-1-missing-alt-text"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Wrong Way"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<img src=\"photo.jpg\" />\n<img src=\"logo.png\" alt=\"logo\" />"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Correct Way"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<img src=\"photo.jpg\" alt=\"Team photo at the annual company retreat\" />\n<img src=\"logo.png\" alt=\"Acme Corporation — Home\" />\n<!-- Decorative image: -->\n<img src=\"divider.png\" alt=\"\" role=\"presentation\" />"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Why It Matters"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\nMissing alt text is a Level A WCAG violation. Screen readers cannot describe images without it."
+                }
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "mistake-1-missing-alt-text",
+              "text": "Mistake 1: Missing Alt Text",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "html"
+          ]
+        },
+        {
+          "id": "chapter-4-4-beginner-mistakes-s3",
+          "slug": "mistake-2-using-divs-for-everything",
+          "title": "Mistake 2: Using Divs for Everything",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Mistake 2: Using Divs for Everything",
+              "id": "mistake-2-using-divs-for-everything"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Wrong Way"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<div class=\"header\">\n  <div class=\"nav\">\n    <div onclick=\"location='/'\">Home</div>\n  </div>\n</div>"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Correct Way"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<header>\n  <nav>\n    <ul>\n      <li><a href=\"/\">Home</a></li>\n    </ul>\n  </nav>\n</header>"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Why It Matters"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\nScreen readers announce landmark elements by name. "
+                },
+                {
+                  "type": "code",
+                  "value": "<nav>"
+                },
+                {
+                  "type": "text",
+                  "value": " is announced as \"navigation\". "
+                },
+                {
+                  "type": "code",
+                  "value": "<div class=\"nav\">"
+                },
+                {
+                  "type": "text",
+                  "value": " is announced as nothing."
+                }
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "mistake-2-using-divs-for-everything",
+              "text": "Mistake 2: Using Divs for Everything",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "html"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 2
+    },
+    {
+      "id": "chapter-5",
+      "slug": "chapter-5-5-accessibility-guidelines",
+      "title": "5. Accessibility Guidelines",
+      "order": 5,
+      "sections": [
+        {
+          "id": "chapter-5-5-accessibility-guidelines-s2",
+          "slug": "wcag-fundamentals",
+          "title": "WCAG Fundamentals",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "WCAG Fundamentals",
+              "id": "wcag-fundamentals"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "WCAG 2.1 is organised around four principles: "
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Perceivable, Operable, Understandable, Robust"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " (POUR)."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Conformance levels:"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                {
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "strong",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Level A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " — Minimum. Must be met."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "strong",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Level AA"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " — Standard. Required by most laws."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "strong",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Level AAA"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " — Enhanced. Not required for all content."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "wcag-fundamentals",
+              "text": "WCAG Fundamentals",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": false,
+          "codeLanguages": []
+        },
+        {
+          "id": "chapter-5-5-accessibility-guidelines-s3",
+          "slug": "focus-management",
+          "title": "Focus Management",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Focus Management",
+              "id": "focus-management"
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<!-- Skip navigation link — first element in body -->\n<a href=\"#main-content\" class=\"skip-link\">Skip to main content</a>\n\n<!-- Main content target -->\n<main id=\"main-content\">\n  <!-- content -->\n</main>"
+            }
+          ],
+          "toc": [
+            {
+              "id": "focus-management",
+              "text": "Focus Management",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "html"
+          ]
+        },
+        {
+          "id": "chapter-5-5-accessibility-guidelines-s4",
+          "slug": "accessible-forms",
+          "title": "Accessible Forms",
+          "order": 4,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Accessible Forms",
+              "id": "accessible-forms"
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<!-- Error state -->\n<div class=\"form-group\">\n  <label for=\"email\">Email Address</label>\n  <input\n    type=\"email\"\n    id=\"email\"\n    aria-invalid=\"true\"\n    aria-describedby=\"email-error\"\n  />\n  <p id=\"email-error\" role=\"alert\">\n    Please enter a valid email address.\n  </p>\n</div>"
+            }
+          ],
+          "toc": [
+            {
+              "id": "accessible-forms",
+              "text": "Accessible Forms",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "html"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 3
+    },
+    {
+      "id": "chapter-6",
+      "slug": "chapter-6-6-seo-guidelines",
+      "title": "6. SEO Guidelines",
+      "order": 6,
+      "sections": [
+        {
+          "id": "chapter-6-6-seo-guidelines-s2",
+          "slug": "title-tag",
+          "title": "Title Tag",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Title Tag",
+              "id": "title-tag"
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<!-- Format: Primary keyword — Brand Name -->\n<title>Frontend Developer Guide — DevLearn</title>"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Rules:"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                {
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Maximum 60 characters."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Every page must have a unique title."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Include the primary keyword near the beginning."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "title-tag",
+              "text": "Title Tag",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "html"
+          ]
+        },
+        {
+          "id": "chapter-6-6-seo-guidelines-s3",
+          "slug": "meta-description",
+          "title": "Meta Description",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Meta Description",
+              "id": "meta-description"
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<meta\n  name=\"description\"\n  content=\"Complete HTML5 guide covering semantic markup, accessibility, forms, and production standards.\"\n/>"
+            }
+          ],
+          "toc": [
+            {
+              "id": "meta-description",
+              "text": "Meta Description",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "html"
+          ]
+        },
+        {
+          "id": "chapter-6-6-seo-guidelines-s4",
+          "slug": "structured-data",
+          "title": "Structured Data",
+          "order": 4,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Structured Data",
+              "id": "structured-data"
+            },
+            {
+              "type": "code",
+              "language": "html",
+              "code": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"HTML5 Professional Guide\",\n  \"author\": { \"@type\": \"Person\", \"name\": \"DevLearn\" }\n}\n</script>"
+            }
+          ],
+          "toc": [
+            {
+              "id": "structured-data",
+              "text": "Structured Data",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "html"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 3
+    }
+  ],
+  "totalSections": 15,
+  "totalReadingMinutes": 15,
+  "updatedAt": "2026-06-10T10:12:42.082Z"
+}

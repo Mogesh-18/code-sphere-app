@@ -1,0 +1,400 @@
+{
+  "slug": "javascript",
+  "filename": "javascript-guide.md",
+  "title": "JavaScript Professional",
+  "tagline": "Modern ES2024 JavaScript from fundamentals to mastery",
+  "category": "language",
+  "difficulty": "intermediate",
+  "tags": [
+    "javascript",
+    "es6",
+    "async",
+    "dom",
+    "modules"
+  ],
+  "icon": "⚡",
+  "color": "#F7DF1E",
+  "gradient": "from-yellow-500 to-amber-400",
+  "prerequisites": [
+    "html",
+    "css"
+  ],
+  "relatedCourses": [
+    "jquery",
+    "html",
+    "css"
+  ],
+  "author": "Internal",
+  "version": "1.0.0",
+  "id": "javascript",
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "slug": "chapter-1-1-introduction",
+      "title": "1. Introduction",
+      "order": 1,
+      "sections": [
+        {
+          "id": "chapter-1-1-introduction-s2",
+          "slug": "what-javascript-is",
+          "title": "What JavaScript Is",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "What JavaScript Is",
+              "id": "what-javascript-is"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "JavaScript is the only programming language natively understood by web browsers."
+                }
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "what-javascript-is",
+              "text": "What JavaScript Is",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": false,
+          "codeLanguages": []
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-2",
+      "slug": "chapter-2-2-core-fundamentals",
+      "title": "2. Core Fundamentals",
+      "order": 2,
+      "sections": [
+        {
+          "id": "chapter-2-2-core-fundamentals-s2",
+          "slug": "variables",
+          "title": "Variables",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Variables",
+              "id": "variables"
+            },
+            {
+              "type": "code",
+              "language": "javascript",
+              "code": "const MAX = 5;       // Immutable binding — prefer const\nlet count = 0;       // Mutable — use only when reassignment needed\n// Never use var"
+            }
+          ],
+          "toc": [
+            {
+              "id": "variables",
+              "text": "Variables",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "javascript"
+          ]
+        },
+        {
+          "id": "chapter-2-2-core-fundamentals-s3",
+          "slug": "closures",
+          "title": "Closures",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Closures",
+              "id": "closures"
+            },
+            {
+              "type": "code",
+              "language": "javascript",
+              "code": "function createCounter() {\n  let count = 0;\n  return {\n    increment() { count++; },\n    getCount()  { return count; },\n  };\n}\nconst counter = createCounter();\ncounter.increment();\nconsole.log(counter.getCount()); // 1"
+            }
+          ],
+          "toc": [
+            {
+              "id": "closures",
+              "text": "Closures",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "javascript"
+          ]
+        },
+        {
+          "id": "chapter-2-2-core-fundamentals-s4",
+          "slug": "arrow-functions",
+          "title": "Arrow Functions",
+          "order": 4,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Arrow Functions",
+              "id": "arrow-functions"
+            },
+            {
+              "type": "code",
+              "language": "javascript",
+              "code": "const add = (a, b) => a + b;\nconst square = n => n * n;\nconst getConfig = () => ({ host: 'localhost' });"
+            }
+          ],
+          "toc": [
+            {
+              "id": "arrow-functions",
+              "text": "Arrow Functions",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "javascript"
+          ]
+        },
+        {
+          "id": "chapter-2-2-core-fundamentals-s5",
+          "slug": "destructuring",
+          "title": "Destructuring",
+          "order": 5,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Destructuring",
+              "id": "destructuring"
+            },
+            {
+              "type": "code",
+              "language": "javascript",
+              "code": "const { name, age = 0 } = user;\nconst [first, ...rest] = array;\nconst { address: { city } } = user;"
+            }
+          ],
+          "toc": [
+            {
+              "id": "destructuring",
+              "text": "Destructuring",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "javascript"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 4
+    },
+    {
+      "id": "chapter-3",
+      "slug": "chapter-3-3-async-javascript",
+      "title": "3. Async JavaScript",
+      "order": 3,
+      "sections": [
+        {
+          "id": "chapter-3-3-async-javascript-s2",
+          "slug": "promises",
+          "title": "Promises",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Promises",
+              "id": "promises"
+            },
+            {
+              "type": "code",
+              "language": "javascript",
+              "code": "fetchUser(1)\n  .then(user => fetchPosts(user.id))\n  .then(posts => renderPosts(posts))\n  .catch(err => showError(err.message))\n  .finally(() => hideLoader());"
+            }
+          ],
+          "toc": [
+            {
+              "id": "promises",
+              "text": "Promises",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "javascript"
+          ]
+        },
+        {
+          "id": "chapter-3-3-async-javascript-s3",
+          "slug": "asyncawait",
+          "title": "Async/Await",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Async/Await",
+              "id": "asyncawait"
+            },
+            {
+              "type": "code",
+              "language": "javascript",
+              "code": "async function loadProfile(userId) {\n  try {\n    const user = await fetchUser(userId);\n    const [posts, followers] = await Promise.all([\n      fetchPosts(user.id),\n      fetchFollowers(user.id),\n    ]);\n    return { ...user, posts, followers };\n  } catch (error) {\n    throw new Error(`Profile load failed: ${error.message}`);\n  }\n}"
+            }
+          ],
+          "toc": [
+            {
+              "id": "asyncawait",
+              "text": "Async/Await",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "javascript"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 2
+    },
+    {
+      "id": "chapter-4",
+      "slug": "chapter-4-4-array-methods",
+      "title": "4. Array Methods",
+      "order": 4,
+      "sections": [
+        {
+          "id": "chapter-4-4-array-methods-s1",
+          "slug": "4-array-methods",
+          "title": "4. Array Methods",
+          "order": 1,
+          "content": [
+            {
+              "type": "code",
+              "language": "javascript",
+              "code": "const products = [\n  { id: 1, name: 'Laptop', price: 45000, active: true },\n  { id: 2, name: 'Monitor', price: 18000, active: false },\n];\n\n// map — transform\nconst names = products.map(p => p.name);\n\n// filter — select\nconst active = products.filter(p => p.active);\n\n// reduce — accumulate\nconst total = products.reduce((sum, p) => sum + p.price, 0);\n\n// find — first match\nconst laptop = products.find(p => p.id === 1);\n\n// some / every\nconst hasExpensive = products.some(p => p.price > 40000);\nconst allNamed = products.every(p => p.name);"
+            }
+          ],
+          "toc": [],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "javascript"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-5",
+      "slug": "chapter-5-5-event-handling",
+      "title": "5. Event Handling",
+      "order": 5,
+      "sections": [
+        {
+          "id": "chapter-5-5-event-handling-s1",
+          "slug": "5-event-handling",
+          "title": "5. Event Handling",
+          "order": 1,
+          "content": [
+            {
+              "type": "code",
+              "language": "javascript",
+              "code": "// Named function — can be removed\nfunction handleClick(event) {\n  event.preventDefault();\n  submitForm(event.currentTarget);\n}\n\nbtn.addEventListener('click', handleClick);\nbtn.removeEventListener('click', handleClick);\n\n// Event delegation\ndocument.getElementById('list').addEventListener('click', event => {\n  const item = event.target.closest('.item');\n  if (!item) return;\n  handleItemClick(item.dataset.id);\n});"
+            }
+          ],
+          "toc": [],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "javascript"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-6",
+      "slug": "chapter-6-6-error-handling",
+      "title": "6. Error Handling",
+      "order": 6,
+      "sections": [
+        {
+          "id": "chapter-6-6-error-handling-s1",
+          "slug": "6-error-handling",
+          "title": "6. Error Handling",
+          "order": 1,
+          "content": [
+            {
+              "type": "code",
+              "language": "javascript",
+              "code": "class AppError extends Error {\n  constructor(message, code) {\n    super(message);\n    this.name = 'AppError';\n    this.code = code;\n  }\n}\n\nasync function submitForm(data) {\n  try {\n    const result = await postData('/api/submit', data);\n    return result;\n  } catch (error) {\n    if (error instanceof AppError) {\n      showUserError(error.message);\n    } else {\n      logError(error);\n      throw error;\n    }\n  }\n}"
+            }
+          ],
+          "toc": [],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "javascript"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-7",
+      "slug": "chapter-7-7-performance",
+      "title": "7. Performance",
+      "order": 7,
+      "sections": [
+        {
+          "id": "chapter-7-7-performance-s1",
+          "slug": "7-performance",
+          "title": "7. Performance",
+          "order": 1,
+          "content": [
+            {
+              "type": "code",
+              "language": "javascript",
+              "code": "// Debounce: delay until user stops typing\nfunction debounce(fn, delay) {\n  let timer;\n  return (...args) => {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), delay);\n  };\n}\n\n// DocumentFragment: batch DOM insertions\nconst fragment = document.createDocumentFragment();\nitems.forEach(item => fragment.appendChild(createCard(item)));\ncontainer.appendChild(fragment); // Single reflow"
+            }
+          ],
+          "toc": [],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "javascript"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 1
+    }
+  ],
+  "totalSections": 11,
+  "totalReadingMinutes": 11,
+  "updatedAt": "2026-06-10T10:12:42.094Z"
+}

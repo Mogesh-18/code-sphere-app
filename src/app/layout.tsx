@@ -1,29 +1,6 @@
 import type { Metadata } from 'next'
-import { Syne, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google'
 import '@/styles/globals.css'
 import { Providers } from './providers'
-
-const syne = Syne({
-    subsets: ['latin'],
-    variable: '--font-syne',
-    weight: ['400', '500', '600', '700', '800'],
-    display: 'swap',
-})
-
-const ibmPlexSans = IBM_Plex_Sans({
-    subsets: ['latin'],
-    variable: '--font-ibm-plex-sans',
-    weight: ['300', '400', '500', '600'],
-    style: ['normal', 'italic'],
-    display: 'swap',
-})
-
-const ibmPlexMono = IBM_Plex_Mono({
-    subsets: ['latin'],
-    variable: '--font-ibm-plex-mono',
-    weight: ['400', '500'],
-    display: 'swap',
-})
 
 export const metadata: Metadata = {
     title: {
@@ -37,23 +14,31 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         locale: 'en_IN',
-        url: 'https://devlearn.dev',
         siteName: 'DevLearn',
         title: 'DevLearn — Professional Developer Learning Platform',
         description: 'Master modern web development with professional guides.',
     },
     robots: { index: true, follow: true },
+}
+
+export const viewport = {
     themeColor: '#F59E0B',
-    viewport: { width: 'device-width', initialScale: 1, maximumScale: 5 },
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html
-            lang="en"
-            className={`${syne.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
-            suppressHydrationWarning
-        >
+        <html lang="en" suppressHydrationWarning>
+            <head>
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+                    rel="stylesheet"
+                />
+            </head>
             <body className="bg-surface-950 text-[var(--text-primary)] font-body antialiased">
                 <Providers>{children}</Providers>
             </body>

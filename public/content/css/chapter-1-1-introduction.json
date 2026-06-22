@@ -1,0 +1,43 @@
+{
+  "id": "chapter-1",
+  "slug": "chapter-1-1-introduction",
+  "title": "1. Introduction",
+  "order": 1,
+  "sections": [
+    {
+      "id": "chapter-1-1-introduction-s2",
+      "slug": "what-css-is",
+      "title": "What CSS Is",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "What CSS Is",
+          "id": "what-css-is"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "CSS (Cascading Style Sheets) controls layout, colour, typography, spacing, and animation."
+            }
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "what-css-is",
+          "text": "What CSS Is",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": false,
+      "codeLanguages": []
+    }
+  ],
+  "totalReadingMinutes": 1
+}

@@ -1,0 +1,86 @@
+{
+  "id": "chapter-1",
+  "slug": "chapter-1-1-introduction",
+  "title": "1. Introduction",
+  "order": 1,
+  "sections": [
+    {
+      "id": "chapter-1-1-introduction-s2",
+      "slug": "what-html-is",
+      "title": "What HTML Is",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "What HTML Is",
+          "id": "what-html-is"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "HTML (HyperText Markup Language) is the standard markup language used to create the structure and content of web pages. It is not a programming language — it defines what content is and what role it plays."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Every web page on the internet is built on HTML. React renders HTML. Vue renders HTML. Angular renders HTML."
+            }
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "what-html-is",
+          "text": "What HTML Is",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": false,
+      "codeLanguages": []
+    },
+    {
+      "id": "chapter-1-1-introduction-s3",
+      "slug": "why-companies-use-html",
+      "title": "Why Companies Use HTML",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Why Companies Use HTML",
+          "id": "why-companies-use-html"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "HTML is the non-negotiable foundation of all web development. The browser only understands HTML, CSS, and JavaScript."
+            }
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "why-companies-use-html",
+          "text": "Why Companies Use HTML",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": false,
+      "codeLanguages": []
+    }
+  ],
+  "totalReadingMinutes": 2
+}

@@ -1,0 +1,41 @@
+{
+  "id": "chapter-5",
+  "slug": "chapter-5-5-security",
+  "title": "5. Security",
+  "order": 5,
+  "sections": [
+    {
+      "id": "chapter-5-5-security-s2",
+      "slug": "xss-prevention",
+      "title": "XSS Prevention",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "XSS Prevention",
+          "id": "xss-prevention"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// SAFE — .text() HTML-escapes content\n$('#welcome').text('Hello, ' + userName);\n\n// UNSAFE — .html() parses as HTML\n$('#welcome').html('Hello, ' + userName); // XSS risk"
+        }
+      ],
+      "toc": [
+        {
+          "id": "xss-prevention",
+          "text": "XSS Prevention",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

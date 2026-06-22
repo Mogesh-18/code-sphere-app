@@ -1,0 +1,41 @@
+{
+  "id": "chapter-3",
+  "slug": "chapter-3-3-responsive-design",
+  "title": "3. Responsive Design",
+  "order": 3,
+  "sections": [
+    {
+      "id": "chapter-3-3-responsive-design-s2",
+      "slug": "mobile-first",
+      "title": "Mobile-First",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Mobile-First",
+          "id": "mobile-first"
+        },
+        {
+          "type": "code",
+          "language": "css",
+          "code": ".grid { grid-template-columns: 1fr; }\n\n@media (min-width: 768px) {\n  .grid { grid-template-columns: repeat(2, 1fr); }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  * { animation-duration: 0.01ms !important; }\n}"
+        }
+      ],
+      "toc": [
+        {
+          "id": "mobile-first",
+          "text": "Mobile-First",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "css"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

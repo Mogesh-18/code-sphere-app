@@ -1,0 +1,43 @@
+{
+  "id": "chapter-1",
+  "slug": "chapter-1-1-introduction",
+  "title": "1. Introduction",
+  "order": 1,
+  "sections": [
+    {
+      "id": "chapter-1-1-introduction-s2",
+      "slug": "what-laravel-is",
+      "title": "What Laravel Is",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "What Laravel Is",
+          "id": "what-laravel-is"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Laravel is the most popular PHP framework, providing routing, authentication, Eloquent ORM, queues, and more."
+            }
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "what-laravel-is",
+          "text": "What Laravel Is",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": false,
+      "codeLanguages": []
+    }
+  ],
+  "totalReadingMinutes": 1
+}

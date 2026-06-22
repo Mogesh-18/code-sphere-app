@@ -1,0 +1,28 @@
+{
+  "id": "chapter-6",
+  "slug": "chapter-6-6-error-handling",
+  "title": "6. Error Handling",
+  "order": 6,
+  "sections": [
+    {
+      "id": "chapter-6-6-error-handling-s1",
+      "slug": "6-error-handling",
+      "title": "6. Error Handling",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "class AppError extends Error {\n  constructor(message, code) {\n    super(message);\n    this.name = 'AppError';\n    this.code = code;\n  }\n}\n\nasync function submitForm(data) {\n  try {\n    const result = await postData('/api/submit', data);\n    return result;\n  } catch (error) {\n    if (error instanceof AppError) {\n      showUserError(error.message);\n    } else {\n      logError(error);\n      throw error;\n    }\n  }\n}"
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

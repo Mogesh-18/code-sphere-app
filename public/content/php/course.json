@@ -1,0 +1,412 @@
+{
+  "slug": "php",
+  "filename": "php-guide.md",
+  "title": "PHP Professional",
+  "tagline": "Modern PHP 8.3 — OOP, security, and best practices",
+  "category": "backend",
+  "difficulty": "intermediate",
+  "tags": [
+    "php",
+    "oop",
+    "security",
+    "pdo",
+    "composer"
+  ],
+  "icon": "🐘",
+  "color": "#8892BE",
+  "gradient": "from-purple-600 to-violet-500",
+  "prerequisites": [
+    "html"
+  ],
+  "relatedCourses": [
+    "laravel",
+    "html"
+  ],
+  "author": "Internal",
+  "version": "1.0.0",
+  "id": "php",
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "slug": "chapter-1-1-introduction",
+      "title": "1. Introduction",
+      "order": 1,
+      "sections": [
+        {
+          "id": "chapter-1-1-introduction-s2",
+          "slug": "what-php-is",
+          "title": "What PHP Is",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "What PHP Is",
+              "id": "what-php-is"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "PHP is a server-side scripting language powering ~77% of all websites. Modern PHP 8.3 supports union types, enums, fibers, and JIT compilation."
+                }
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "what-php-is",
+              "text": "What PHP Is",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": false,
+          "codeLanguages": []
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-2",
+      "slug": "chapter-2-2-core-fundamentals",
+      "title": "2. Core Fundamentals",
+      "order": 2,
+      "sections": [
+        {
+          "id": "chapter-2-2-core-fundamentals-s2",
+          "slug": "strict-types",
+          "title": "Strict Types",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Strict Types",
+              "id": "strict-types"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "<?php\ndeclare(strict_types=1);\n\nfunction calculateDiscount(float $price, float $rate): float {\n    return $price * (1 - $rate);\n}"
+            }
+          ],
+          "toc": [
+            {
+              "id": "strict-types",
+              "text": "Strict Types",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        },
+        {
+          "id": "chapter-2-2-core-fundamentals-s3",
+          "slug": "variables-and-types",
+          "title": "Variables and Types",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Variables and Types",
+              "id": "variables-and-types"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "$name    = 'Alice';\n$age     = 30;\n$price   = 99.99;\n$active  = true;\n$nothing = null;\n\n// Null coalescing\n$name = $_GET['name'] ?? 'Guest';\n\n// Nullsafe operator\n$city = $user?->getAddress()?->getCity();"
+            }
+          ],
+          "toc": [
+            {
+              "id": "variables-and-types",
+              "text": "Variables and Types",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        },
+        {
+          "id": "chapter-2-2-core-fundamentals-s4",
+          "slug": "arrays",
+          "title": "Arrays",
+          "order": 4,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Arrays",
+              "id": "arrays"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "$products = [\n    ['id' => 1, 'name' => 'Laptop', 'price' => 45000],\n    ['id' => 2, 'name' => 'Monitor', 'price' => 18000],\n];\n\n$names   = array_column($products, 'name');\n$sorted  = usort($products, fn($a, $b) => $a['price'] - $b['price']);\n$inStock = array_filter($products, fn($p) => $p['price'] > 20000);"
+            }
+          ],
+          "toc": [
+            {
+              "id": "arrays",
+              "text": "Arrays",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 3
+    },
+    {
+      "id": "chapter-3",
+      "slug": "chapter-3-3-oop",
+      "title": "3. OOP",
+      "order": 3,
+      "sections": [
+        {
+          "id": "chapter-3-3-oop-s2",
+          "slug": "classes",
+          "title": "Classes",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Classes",
+              "id": "classes"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "<?php\nclass Product {\n    public function __construct(\n        private readonly int    $id,\n        private string          $name,\n        private float           $price,\n    ) {}\n\n    public function getId(): int    { return $this->id; }\n    public function getName(): string { return $this->name; }\n\n    public function applyDiscount(float $rate): self {\n        $this->price = round($this->price * (1 - $rate), 2);\n        return $this;\n    }\n\n    public function toArray(): array {\n        return ['id' => $this->id, 'name' => $this->name, 'price' => $this->price];\n    }\n}"
+            }
+          ],
+          "toc": [
+            {
+              "id": "classes",
+              "text": "Classes",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        },
+        {
+          "id": "chapter-3-3-oop-s3",
+          "slug": "enums-php-81",
+          "title": "Enums (PHP 8.1+)",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Enums (PHP 8.1+)",
+              "id": "enums-php-81"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "enum OrderStatus: string {\n    case Pending   = 'pending';\n    case Confirmed = 'confirmed';\n    case Shipped   = 'shipped';\n\n    public function label(): string {\n        return match($this) {\n            self::Pending   => 'Pending Review',\n            self::Confirmed => 'Order Confirmed',\n            self::Shipped   => 'Shipped',\n        };\n    }\n}\n\n$status = OrderStatus::from('pending');\necho $status->label(); // \"Pending Review\""
+            }
+          ],
+          "toc": [
+            {
+              "id": "enums-php-81",
+              "text": "Enums (PHP 8.1+)",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 2
+    },
+    {
+      "id": "chapter-4",
+      "slug": "chapter-4-4-database-pdo",
+      "title": "4. Database (PDO)",
+      "order": 4,
+      "sections": [
+        {
+          "id": "chapter-4-4-database-pdo-s1",
+          "slug": "4-database-pdo",
+          "title": "4. Database (PDO)",
+          "order": 1,
+          "content": [
+            {
+              "type": "code",
+              "language": "php",
+              "code": "$stmt = $db->prepare('SELECT * FROM users WHERE id = :id');\n$stmt->execute(['id' => $id]);\n$user = $stmt->fetch();"
+            },
+            {
+              "type": "table",
+              "headers": [
+                "Method",
+                "Purpose"
+              ],
+              "rows": [
+                [
+                  "prepare()",
+                  "Compiles SQL with placeholders"
+                ],
+                [
+                  "execute()",
+                  "Binds values and runs query"
+                ],
+                [
+                  "fetch()",
+                  "Gets one row"
+                ],
+                [
+                  "fetchAll()",
+                  "Gets all rows"
+                ]
+              ],
+              "align": [
+                null,
+                null
+              ]
+            }
+          ],
+          "toc": [],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-5",
+      "slug": "chapter-5-5-security",
+      "title": "5. Security",
+      "order": 5,
+      "sections": [
+        {
+          "id": "chapter-5-5-security-s2",
+          "slug": "passwords",
+          "title": "Passwords",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Passwords",
+              "id": "passwords"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "// Hashing\n$hash = password_hash($password, PASSWORD_BCRYPT, ['cost' => 12]);\n\n// Verification\nif (!password_verify($input, $hash)) {\n    throw new AuthException('Invalid credentials');\n}"
+            }
+          ],
+          "toc": [
+            {
+              "id": "passwords",
+              "text": "Passwords",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        },
+        {
+          "id": "chapter-5-5-security-s3",
+          "slug": "xss-prevention",
+          "title": "XSS Prevention",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "XSS Prevention",
+              "id": "xss-prevention"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "// Escape all user output\necho htmlspecialchars($userInput, ENT_QUOTES | ENT_HTML5, 'UTF-8');\n\n// Helper function\nfunction e(string $value): string {\n    return htmlspecialchars($value, ENT_QUOTES | ENT_HTML5, 'UTF-8');\n}"
+            }
+          ],
+          "toc": [
+            {
+              "id": "xss-prevention",
+              "text": "XSS Prevention",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 2
+    },
+    {
+      "id": "chapter-6",
+      "slug": "chapter-6-6-error-handling",
+      "title": "6. Error Handling",
+      "order": 6,
+      "sections": [
+        {
+          "id": "chapter-6-6-error-handling-s1",
+          "slug": "6-error-handling",
+          "title": "6. Error Handling",
+          "order": 1,
+          "content": [
+            {
+              "type": "code",
+              "language": "php",
+              "code": "<?php\nclass ValidationException extends RuntimeException {\n    public function __construct(private array $errors) {\n        parent::__construct('Validation failed');\n    }\n    public function getErrors(): array { return $this->errors; }\n}\n\nfunction processOrder(array $data): array {\n    try {\n        $validated = validate($data);\n        $order = createOrder($validated);\n        return ['success' => true, 'orderId' => $order->getId()];\n    } catch (ValidationException $e) {\n        return ['success' => false, 'errors' => $e->getErrors()];\n    } catch (\\Throwable $e) {\n        logError($e);\n        throw $e;\n    }\n}"
+            }
+          ],
+          "toc": [],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 1
+    }
+  ],
+  "totalSections": 10,
+  "totalReadingMinutes": 10,
+  "updatedAt": "2026-06-10T10:12:42.105Z"
+}

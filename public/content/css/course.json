@@ -1,0 +1,418 @@
+{
+  "slug": "css",
+  "filename": "css-guide.md",
+  "title": "CSS Professional",
+  "tagline": "Flexbox, Grid, animations, and modern CSS architecture",
+  "category": "frontend",
+  "difficulty": "beginner",
+  "tags": [
+    "css",
+    "flexbox",
+    "grid",
+    "responsive",
+    "animations"
+  ],
+  "icon": "🎨",
+  "color": "#264DE4",
+  "gradient": "from-blue-600 to-indigo-500",
+  "prerequisites": [
+    "html"
+  ],
+  "relatedCourses": [
+    "html",
+    "javascript"
+  ],
+  "author": "Internal",
+  "version": "1.0.0",
+  "id": "css",
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "slug": "chapter-1-1-introduction",
+      "title": "1. Introduction",
+      "order": 1,
+      "sections": [
+        {
+          "id": "chapter-1-1-introduction-s2",
+          "slug": "what-css-is",
+          "title": "What CSS Is",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "What CSS Is",
+              "id": "what-css-is"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "CSS (Cascading Style Sheets) controls layout, colour, typography, spacing, and animation."
+                }
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "what-css-is",
+              "text": "What CSS Is",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": false,
+          "codeLanguages": []
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-2",
+      "slug": "chapter-2-2-core-fundamentals",
+      "title": "2. Core Fundamentals",
+      "order": 2,
+      "sections": [
+        {
+          "id": "chapter-2-2-core-fundamentals-s2",
+          "slug": "the-box-model",
+          "title": "The Box Model",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "The Box Model",
+              "id": "the-box-model"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Always use border-box sizing:"
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "language": "css",
+              "code": "*, *::before, *::after { box-sizing: border-box; }"
+            }
+          ],
+          "toc": [
+            {
+              "id": "the-box-model",
+              "text": "The Box Model",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "css"
+          ]
+        },
+        {
+          "id": "chapter-2-2-core-fundamentals-s3",
+          "slug": "css-custom-properties",
+          "title": "CSS Custom Properties",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "CSS Custom Properties",
+              "id": "css-custom-properties"
+            },
+            {
+              "type": "code",
+              "language": "css",
+              "code": ":root {\n  --color-brand: #f59e0b;\n  --space-4: 1rem;\n}\n.button { background: var(--color-brand); }"
+            }
+          ],
+          "toc": [
+            {
+              "id": "css-custom-properties",
+              "text": "CSS Custom Properties",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "css"
+          ]
+        },
+        {
+          "id": "chapter-2-2-core-fundamentals-s4",
+          "slug": "flexbox",
+          "title": "Flexbox",
+          "order": 4,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Flexbox",
+              "id": "flexbox"
+            },
+            {
+              "type": "code",
+              "language": "css",
+              "code": ".container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 1rem;\n}"
+            }
+          ],
+          "toc": [
+            {
+              "id": "flexbox",
+              "text": "Flexbox",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "css"
+          ]
+        },
+        {
+          "id": "chapter-2-2-core-fundamentals-s5",
+          "slug": "css-grid",
+          "title": "CSS Grid",
+          "order": 5,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "CSS Grid",
+              "id": "css-grid"
+            },
+            {
+              "type": "code",
+              "language": "css",
+              "code": ".layout {\n  display: grid;\n  grid-template-columns: 240px 1fr;\n  grid-template-areas: \"sidebar main\";\n}"
+            }
+          ],
+          "toc": [
+            {
+              "id": "css-grid",
+              "text": "CSS Grid",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "css"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 4
+    },
+    {
+      "id": "chapter-3",
+      "slug": "chapter-3-3-responsive-design",
+      "title": "3. Responsive Design",
+      "order": 3,
+      "sections": [
+        {
+          "id": "chapter-3-3-responsive-design-s2",
+          "slug": "mobile-first",
+          "title": "Mobile-First",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Mobile-First",
+              "id": "mobile-first"
+            },
+            {
+              "type": "code",
+              "language": "css",
+              "code": ".grid { grid-template-columns: 1fr; }\n\n@media (min-width: 768px) {\n  .grid { grid-template-columns: repeat(2, 1fr); }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  * { animation-duration: 0.01ms !important; }\n}"
+            }
+          ],
+          "toc": [
+            {
+              "id": "mobile-first",
+              "text": "Mobile-First",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "css"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-4",
+      "slug": "chapter-4-4-bem-methodology",
+      "title": "4. BEM Methodology",
+      "order": 4,
+      "sections": [
+        {
+          "id": "chapter-4-4-bem-methodology-s1",
+          "slug": "4-bem-methodology",
+          "title": "4. BEM Methodology",
+          "order": 1,
+          "content": [
+            {
+              "type": "code",
+              "language": "css",
+              "code": ".card { }\n.card__title { }\n.card--featured { }"
+            }
+          ],
+          "toc": [],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "css"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-5",
+      "slug": "chapter-5-5-accessibility",
+      "title": "5. Accessibility",
+      "order": 5,
+      "sections": [
+        {
+          "id": "chapter-5-5-accessibility-s2",
+          "slug": "focus-indicators",
+          "title": "Focus Indicators",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Focus Indicators",
+              "id": "focus-indicators"
+            },
+            {
+              "type": "code",
+              "language": "css",
+              "code": ":focus { outline: none; }\n:focus-visible {\n  outline: 3px solid #3b82f6;\n  outline-offset: 3px;\n}"
+            }
+          ],
+          "toc": [
+            {
+              "id": "focus-indicators",
+              "text": "Focus Indicators",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "css"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-6",
+      "slug": "chapter-6-6-performance",
+      "title": "6. Performance",
+      "order": 6,
+      "sections": [
+        {
+          "id": "chapter-6-6-performance-s1",
+          "slug": "6-performance",
+          "title": "6. Performance",
+          "order": 1,
+          "content": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Animate only GPU-composited properties: "
+                },
+                {
+                  "type": "code",
+                  "value": "transform"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "code",
+                  "value": "opacity"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "code",
+                  "value": "filter"
+                },
+                {
+                  "type": "text",
+                  "value": ".\nAvoid animating "
+                },
+                {
+                  "type": "code",
+                  "value": "width"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "code",
+                  "value": "height"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "code",
+                  "value": "top"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "code",
+                  "value": "left"
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            }
+          ],
+          "toc": [],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": false,
+          "codeLanguages": []
+        }
+      ],
+      "totalReadingMinutes": 1
+    }
+  ],
+  "totalSections": 9,
+  "totalReadingMinutes": 9,
+  "updatedAt": "2026-06-10T10:12:42.089Z"
+}

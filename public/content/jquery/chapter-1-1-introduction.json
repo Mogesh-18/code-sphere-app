@@ -1,0 +1,43 @@
+{
+  "id": "chapter-1",
+  "slug": "chapter-1-1-introduction",
+  "title": "1. Introduction",
+  "order": 1,
+  "sections": [
+    {
+      "id": "chapter-1-1-introduction-s2",
+      "slug": "what-jquery-is",
+      "title": "What jQuery Is",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "What jQuery Is",
+          "id": "what-jquery-is"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "jQuery is a JavaScript library providing DOM manipulation, event handling, and AJAX. Essential for legacy codebases."
+            }
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "what-jquery-is",
+          "text": "What jQuery Is",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": false,
+      "codeLanguages": []
+    }
+  ],
+  "totalReadingMinutes": 1
+}

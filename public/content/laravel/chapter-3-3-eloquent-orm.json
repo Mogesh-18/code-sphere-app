@@ -1,0 +1,73 @@
+{
+  "id": "chapter-3",
+  "slug": "chapter-3-3-eloquent-orm",
+  "title": "3. Eloquent ORM",
+  "order": 3,
+  "sections": [
+    {
+      "id": "chapter-3-3-eloquent-orm-s2",
+      "slug": "model-definition",
+      "title": "Model Definition",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Model Definition",
+          "id": "model-definition"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "<?php\nclass Product extends Model {\n    use SoftDeletes;\n\n    protected $fillable = ['name', 'slug', 'price', 'active'];\n    protected $casts = ['price' => 'decimal:2', 'active' => 'boolean'];\n\n    // Relationships\n    public function category(): BelongsTo {\n        return $this->belongsTo(Category::class);\n    }\n\n    // Scopes\n    public function scopeActive(Builder $query): Builder {\n        return $query->where('active', true);\n    }\n}"
+        }
+      ],
+      "toc": [
+        {
+          "id": "model-definition",
+          "text": "Model Definition",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    },
+    {
+      "id": "chapter-3-3-eloquent-orm-s3",
+      "slug": "querying",
+      "title": "Querying",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Querying",
+          "id": "querying"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// Eager loading prevents N+1\n$products = Product::with(['category', 'tags'])\n    ->active()\n    ->when($request->search, fn($q, $s) => $q->where('name', 'like', \"%{$s}%\"))\n    ->paginate(20);"
+        }
+      ],
+      "toc": [
+        {
+          "id": "querying",
+          "text": "Querying",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 2
+}

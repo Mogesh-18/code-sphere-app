@@ -1,0 +1,73 @@
+{
+  "id": "chapter-3",
+  "slug": "chapter-3-3-forms",
+  "title": "3. Forms",
+  "order": 3,
+  "sections": [
+    {
+      "id": "chapter-3-3-forms-s2",
+      "slug": "basic-form-structure",
+      "title": "Basic Form Structure",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Basic Form Structure",
+          "id": "basic-form-structure"
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<form action=\"/submit\" method=\"POST\" novalidate>\n  <div class=\"form-group\">\n    <label for=\"full-name\">Full Name *</label>\n    <input\n      type=\"text\"\n      id=\"full-name\"\n      name=\"fullName\"\n      autocomplete=\"name\"\n      required\n      aria-required=\"true\"\n    />\n  </div>\n  <button type=\"submit\">Submit</button>\n</form>"
+        }
+      ],
+      "toc": [
+        {
+          "id": "basic-form-structure",
+          "text": "Basic Form Structure",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "html"
+      ]
+    },
+    {
+      "id": "chapter-3-3-forms-s3",
+      "slug": "input-types",
+      "title": "Input Types",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Input Types",
+          "id": "input-types"
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<input type=\"text\" />        <!-- General text -->\n<input type=\"email\" />       <!-- Email address -->\n<input type=\"password\" />    <!-- Password (masked) -->\n<input type=\"tel\" />         <!-- Phone number -->\n<input type=\"date\" />        <!-- Date picker -->\n<input type=\"checkbox\" />    <!-- Checkbox -->\n<input type=\"radio\" />       <!-- Radio button -->\n<input type=\"hidden\" />      <!-- Hidden value -->"
+        }
+      ],
+      "toc": [
+        {
+          "id": "input-types",
+          "text": "Input Types",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "html"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 2
+}

@@ -1,0 +1,73 @@
+{
+  "id": "chapter-3",
+  "slug": "chapter-3-3-async-javascript",
+  "title": "3. Async JavaScript",
+  "order": 3,
+  "sections": [
+    {
+      "id": "chapter-3-3-async-javascript-s2",
+      "slug": "promises",
+      "title": "Promises",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Promises",
+          "id": "promises"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "fetchUser(1)\n  .then(user => fetchPosts(user.id))\n  .then(posts => renderPosts(posts))\n  .catch(err => showError(err.message))\n  .finally(() => hideLoader());"
+        }
+      ],
+      "toc": [
+        {
+          "id": "promises",
+          "text": "Promises",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    },
+    {
+      "id": "chapter-3-3-async-javascript-s3",
+      "slug": "asyncawait",
+      "title": "Async/Await",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Async/Await",
+          "id": "asyncawait"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "async function loadProfile(userId) {\n  try {\n    const user = await fetchUser(userId);\n    const [posts, followers] = await Promise.all([\n      fetchPosts(user.id),\n      fetchFollowers(user.id),\n    ]);\n    return { ...user, posts, followers };\n  } catch (error) {\n    throw new Error(`Profile load failed: ${error.message}`);\n  }\n}"
+        }
+      ],
+      "toc": [
+        {
+          "id": "asyncawait",
+          "text": "Async/Await",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 2
+}

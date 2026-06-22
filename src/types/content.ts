@@ -141,7 +141,7 @@ export interface Course {
     slug: string
     title: string
     tagline: string
-    description: string
+    description?: string
     category: CourseCategory
     difficulty: DifficultyLevel
     tags: string[]

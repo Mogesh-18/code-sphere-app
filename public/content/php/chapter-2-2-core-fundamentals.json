@@ -1,0 +1,105 @@
+{
+  "id": "chapter-2",
+  "slug": "chapter-2-2-core-fundamentals",
+  "title": "2. Core Fundamentals",
+  "order": 2,
+  "sections": [
+    {
+      "id": "chapter-2-2-core-fundamentals-s2",
+      "slug": "strict-types",
+      "title": "Strict Types",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Strict Types",
+          "id": "strict-types"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "<?php\ndeclare(strict_types=1);\n\nfunction calculateDiscount(float $price, float $rate): float {\n    return $price * (1 - $rate);\n}"
+        }
+      ],
+      "toc": [
+        {
+          "id": "strict-types",
+          "text": "Strict Types",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    },
+    {
+      "id": "chapter-2-2-core-fundamentals-s3",
+      "slug": "variables-and-types",
+      "title": "Variables and Types",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Variables and Types",
+          "id": "variables-and-types"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "$name    = 'Alice';\n$age     = 30;\n$price   = 99.99;\n$active  = true;\n$nothing = null;\n\n// Null coalescing\n$name = $_GET['name'] ?? 'Guest';\n\n// Nullsafe operator\n$city = $user?->getAddress()?->getCity();"
+        }
+      ],
+      "toc": [
+        {
+          "id": "variables-and-types",
+          "text": "Variables and Types",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    },
+    {
+      "id": "chapter-2-2-core-fundamentals-s4",
+      "slug": "arrays",
+      "title": "Arrays",
+      "order": 4,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Arrays",
+          "id": "arrays"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "$products = [\n    ['id' => 1, 'name' => 'Laptop', 'price' => 45000],\n    ['id' => 2, 'name' => 'Monitor', 'price' => 18000],\n];\n\n$names   = array_column($products, 'name');\n$sorted  = usort($products, fn($a, $b) => $a['price'] - $b['price']);\n$inStock = array_filter($products, fn($p) => $p['price'] > 20000);"
+        }
+      ],
+      "toc": [
+        {
+          "id": "arrays",
+          "text": "Arrays",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 3
+}

@@ -1,0 +1,28 @@
+{
+  "id": "chapter-7",
+  "slug": "chapter-7-7-performance",
+  "title": "7. Performance",
+  "order": 7,
+  "sections": [
+    {
+      "id": "chapter-7-7-performance-s1",
+      "slug": "7-performance",
+      "title": "7. Performance",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Debounce: delay until user stops typing\nfunction debounce(fn, delay) {\n  let timer;\n  return (...args) => {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), delay);\n  };\n}\n\n// DocumentFragment: batch DOM insertions\nconst fragment = document.createDocumentFragment();\nitems.forEach(item => fragment.appendChild(createCard(item)));\ncontainer.appendChild(fragment); // Single reflow"
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

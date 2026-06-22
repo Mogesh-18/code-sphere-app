@@ -1,0 +1,73 @@
+{
+  "id": "chapter-7",
+  "slug": "chapter-7-7-common-mistakes",
+  "title": "7. Common Mistakes",
+  "order": 7,
+  "sections": [
+    {
+      "id": "chapter-7-7-common-mistakes-s2",
+      "slug": "n1-query-problem",
+      "title": "N+1 Query Problem",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "N+1 Query Problem",
+          "id": "n1-query-problem"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// Wrong — 1 + N queries\n$orders = Order::all();\nforeach ($orders as $order) {\n    echo $order->user->name; // Query per iteration!\n}\n\n// Correct — 2 queries total\n$orders = Order::with('user')->paginate(20);"
+        }
+      ],
+      "toc": [
+        {
+          "id": "n1-query-problem",
+          "text": "N+1 Query Problem",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    },
+    {
+      "id": "chapter-7-7-common-mistakes-s3",
+      "slug": "mass-assignment",
+      "title": "Mass Assignment",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Mass Assignment",
+          "id": "mass-assignment"
+        },
+        {
+          "type": "code",
+          "language": "php",
+          "code": "// Wrong — any field can be set\n$user = User::create($request->all());\n\n// Correct — only validated fields\n$user = User::create($request->validated());\n// And define $fillable on the model"
+        }
+      ],
+      "toc": [
+        {
+          "id": "mass-assignment",
+          "text": "Mass Assignment",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 2
+}

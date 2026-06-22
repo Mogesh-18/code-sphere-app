@@ -1,0 +1,28 @@
+{
+  "id": "chapter-4",
+  "slug": "chapter-4-4-form-requests",
+  "title": "4. Form Requests",
+  "order": 4,
+  "sections": [
+    {
+      "id": "chapter-4-4-form-requests-s1",
+      "slug": "4-form-requests",
+      "title": "4. Form Requests",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "php",
+          "code": "class StoreProductRequest extends FormRequest {\n    public function authorize(): bool {\n        return $this->user()->can('create', Product::class);\n    }\n\n    public function rules(): array {\n        return [\n            'name'  => ['required', 'string', 'max:200'],\n            'price' => ['required', 'numeric', 'min:0'],\n            'slug'  => ['required', 'unique:products,slug'],\n        ];\n    }\n}\n\n// Controller uses it\npublic function store(StoreProductRequest $request): ProductResource {\n    $product = $this->service->create($request->validated());\n    return new ProductResource($product);\n}"
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "php"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

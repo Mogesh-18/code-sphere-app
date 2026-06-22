@@ -1,0 +1,28 @@
+{
+  "id": "chapter-5",
+  "slug": "chapter-5-5-event-handling",
+  "title": "5. Event Handling",
+  "order": 5,
+  "sections": [
+    {
+      "id": "chapter-5-5-event-handling-s1",
+      "slug": "5-event-handling",
+      "title": "5. Event Handling",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Named function — can be removed\nfunction handleClick(event) {\n  event.preventDefault();\n  submitForm(event.currentTarget);\n}\n\nbtn.addEventListener('click', handleClick);\nbtn.removeEventListener('click', handleClick);\n\n// Event delegation\ndocument.getElementById('list').addEventListener('click', event => {\n  const item = event.target.closest('.item');\n  if (!item) return;\n  handleItemClick(item.dataset.id);\n});"
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

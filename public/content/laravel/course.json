@@ -1,0 +1,379 @@
+{
+  "slug": "laravel",
+  "filename": "laravel-guide.md",
+  "title": "Laravel Professional",
+  "tagline": "Build production-grade applications with Laravel 11",
+  "category": "framework",
+  "difficulty": "advanced",
+  "tags": [
+    "laravel",
+    "php",
+    "eloquent",
+    "api",
+    "queues"
+  ],
+  "icon": "🚀",
+  "color": "#FF2D20",
+  "gradient": "from-red-600 to-orange-500",
+  "prerequisites": [
+    "php"
+  ],
+  "relatedCourses": [
+    "php",
+    "javascript"
+  ],
+  "author": "Internal",
+  "version": "1.0.0",
+  "id": "laravel",
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "slug": "chapter-1-1-introduction",
+      "title": "1. Introduction",
+      "order": 1,
+      "sections": [
+        {
+          "id": "chapter-1-1-introduction-s2",
+          "slug": "what-laravel-is",
+          "title": "What Laravel Is",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "What Laravel Is",
+              "id": "what-laravel-is"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Laravel is the most popular PHP framework, providing routing, authentication, Eloquent ORM, queues, and more."
+                }
+              ]
+            }
+          ],
+          "toc": [
+            {
+              "id": "what-laravel-is",
+              "text": "What Laravel Is",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": false,
+          "codeLanguages": []
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-2",
+      "slug": "chapter-2-2-core-concepts",
+      "title": "2. Core Concepts",
+      "order": 2,
+      "sections": [
+        {
+          "id": "chapter-2-2-core-concepts-s2",
+          "slug": "directory-structure",
+          "title": "Directory Structure",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Directory Structure",
+              "id": "directory-structure"
+            },
+            {
+              "type": "code",
+              "language": "text",
+              "code": "app/\n├── Http/Controllers/\n├── Http/Requests/     ← Validation\n├── Http/Resources/    ← API responses\n├── Models/\n├── Services/          ← Business logic\nroutes/\n├── web.php\n├── api.php\ndatabase/migrations/"
+            }
+          ],
+          "toc": [
+            {
+              "id": "directory-structure",
+              "text": "Directory Structure",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "text"
+          ]
+        },
+        {
+          "id": "chapter-2-2-core-concepts-s3",
+          "slug": "routing",
+          "title": "Routing",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Routing",
+              "id": "routing"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "// Resource routes\nRoute::apiResource('products', ProductController::class);\n\n// Grouped routes\nRoute::prefix('api/v1')\n     ->middleware(['auth:sanctum'])\n     ->group(function() {\n         Route::apiResource('orders', OrderController::class);\n     });\n\n// Route model binding\nRoute::get('/products/{product:slug}', [ProductController::class, 'show']);"
+            }
+          ],
+          "toc": [
+            {
+              "id": "routing",
+              "text": "Routing",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 2
+    },
+    {
+      "id": "chapter-3",
+      "slug": "chapter-3-3-eloquent-orm",
+      "title": "3. Eloquent ORM",
+      "order": 3,
+      "sections": [
+        {
+          "id": "chapter-3-3-eloquent-orm-s2",
+          "slug": "model-definition",
+          "title": "Model Definition",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Model Definition",
+              "id": "model-definition"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "<?php\nclass Product extends Model {\n    use SoftDeletes;\n\n    protected $fillable = ['name', 'slug', 'price', 'active'];\n    protected $casts = ['price' => 'decimal:2', 'active' => 'boolean'];\n\n    // Relationships\n    public function category(): BelongsTo {\n        return $this->belongsTo(Category::class);\n    }\n\n    // Scopes\n    public function scopeActive(Builder $query): Builder {\n        return $query->where('active', true);\n    }\n}"
+            }
+          ],
+          "toc": [
+            {
+              "id": "model-definition",
+              "text": "Model Definition",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        },
+        {
+          "id": "chapter-3-3-eloquent-orm-s3",
+          "slug": "querying",
+          "title": "Querying",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Querying",
+              "id": "querying"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "// Eager loading prevents N+1\n$products = Product::with(['category', 'tags'])\n    ->active()\n    ->when($request->search, fn($q, $s) => $q->where('name', 'like', \"%{$s}%\"))\n    ->paginate(20);"
+            }
+          ],
+          "toc": [
+            {
+              "id": "querying",
+              "text": "Querying",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 2
+    },
+    {
+      "id": "chapter-4",
+      "slug": "chapter-4-4-form-requests",
+      "title": "4. Form Requests",
+      "order": 4,
+      "sections": [
+        {
+          "id": "chapter-4-4-form-requests-s1",
+          "slug": "4-form-requests",
+          "title": "4. Form Requests",
+          "order": 1,
+          "content": [
+            {
+              "type": "code",
+              "language": "php",
+              "code": "class StoreProductRequest extends FormRequest {\n    public function authorize(): bool {\n        return $this->user()->can('create', Product::class);\n    }\n\n    public function rules(): array {\n        return [\n            'name'  => ['required', 'string', 'max:200'],\n            'price' => ['required', 'numeric', 'min:0'],\n            'slug'  => ['required', 'unique:products,slug'],\n        ];\n    }\n}\n\n// Controller uses it\npublic function store(StoreProductRequest $request): ProductResource {\n    $product = $this->service->create($request->validated());\n    return new ProductResource($product);\n}"
+            }
+          ],
+          "toc": [],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-5",
+      "slug": "chapter-5-5-api-resources",
+      "title": "5. API Resources",
+      "order": 5,
+      "sections": [
+        {
+          "id": "chapter-5-5-api-resources-s1",
+          "slug": "5-api-resources",
+          "title": "5. API Resources",
+          "order": 1,
+          "content": [
+            {
+              "type": "code",
+              "language": "php",
+              "code": "class ProductResource extends JsonResource {\n    public function toArray(Request $request): array {\n        return [\n            'id'       => $this->id,\n            'name'     => $this->name,\n            'price'    => (float) $this->price,\n            'category' => new CategoryResource($this->whenLoaded('category')),\n        ];\n    }\n}"
+            }
+          ],
+          "toc": [],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-6",
+      "slug": "chapter-6-6-queues",
+      "title": "6. Queues",
+      "order": 6,
+      "sections": [
+        {
+          "id": "chapter-6-6-queues-s1",
+          "slug": "6-queues",
+          "title": "6. Queues",
+          "order": 1,
+          "content": [
+            {
+              "type": "code",
+              "language": "php",
+              "code": "class SendOrderConfirmation implements ShouldQueue {\n    use Dispatchable, InteractsWithQueue, Queueable;\n\n    public int $tries   = 3;\n    public int $timeout = 60;\n\n    public function __construct(private readonly Order $order) {}\n\n    public function handle(MailService $mail): void {\n        $mail->sendConfirmation($this->order->user, $this->order);\n    }\n\n    public function failed(\\Throwable $e): void {\n        Log::error('Mail failed', ['order' => $this->order->id, 'error' => $e->getMessage()]);\n    }\n}\n\n// Dispatch\nSendOrderConfirmation::dispatch($order)->onQueue('emails');"
+            }
+          ],
+          "toc": [],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 1
+    },
+    {
+      "id": "chapter-7",
+      "slug": "chapter-7-7-common-mistakes",
+      "title": "7. Common Mistakes",
+      "order": 7,
+      "sections": [
+        {
+          "id": "chapter-7-7-common-mistakes-s2",
+          "slug": "n1-query-problem",
+          "title": "N+1 Query Problem",
+          "order": 2,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "N+1 Query Problem",
+              "id": "n1-query-problem"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "// Wrong — 1 + N queries\n$orders = Order::all();\nforeach ($orders as $order) {\n    echo $order->user->name; // Query per iteration!\n}\n\n// Correct — 2 queries total\n$orders = Order::with('user')->paginate(20);"
+            }
+          ],
+          "toc": [
+            {
+              "id": "n1-query-problem",
+              "text": "N+1 Query Problem",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        },
+        {
+          "id": "chapter-7-7-common-mistakes-s3",
+          "slug": "mass-assignment",
+          "title": "Mass Assignment",
+          "order": 3,
+          "content": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Mass Assignment",
+              "id": "mass-assignment"
+            },
+            {
+              "type": "code",
+              "language": "php",
+              "code": "// Wrong — any field can be set\n$user = User::create($request->all());\n\n// Correct — only validated fields\n$user = User::create($request->validated());\n// And define $fillable on the model"
+            }
+          ],
+          "toc": [
+            {
+              "id": "mass-assignment",
+              "text": "Mass Assignment",
+              "level": 2,
+              "children": []
+            }
+          ],
+          "readingTimeMinutes": 1,
+          "hasCodeExamples": true,
+          "codeLanguages": [
+            "php"
+          ]
+        }
+      ],
+      "totalReadingMinutes": 2
+    }
+  ],
+  "totalSections": 10,
+  "totalReadingMinutes": 10,
+  "updatedAt": "2026-06-10T10:12:42.110Z"
+}

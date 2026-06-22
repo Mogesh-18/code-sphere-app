@@ -1,0 +1,105 @@
+{
+  "id": "chapter-2",
+  "slug": "chapter-2-2-core-fundamentals",
+  "title": "2. Core Fundamentals",
+  "order": 2,
+  "sections": [
+    {
+      "id": "chapter-2-2-core-fundamentals-s2",
+      "slug": "document-ready",
+      "title": "Document Ready",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Document Ready",
+          "id": "document-ready"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "$(function() {\n  // DOM ready — preferred shorthand\n  initApp();\n});"
+        }
+      ],
+      "toc": [
+        {
+          "id": "document-ready",
+          "text": "Document Ready",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    },
+    {
+      "id": "chapter-2-2-core-fundamentals-s3",
+      "slug": "selectors",
+      "title": "Selectors",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Selectors",
+          "id": "selectors"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "$('#hero')           // ID\n$('.card')           // Class\n$('input[required]') // Attribute\n$('.card').first()   // First match\n$('.card').eq(2)     // By index"
+        }
+      ],
+      "toc": [
+        {
+          "id": "selectors",
+          "text": "Selectors",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    },
+    {
+      "id": "chapter-2-2-core-fundamentals-s4",
+      "slug": "dom-manipulation",
+      "title": "DOM Manipulation",
+      "order": 4,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "DOM Manipulation",
+          "id": "dom-manipulation"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "$el.text('Safe content');          // XSS-safe\n$el.html('<p>Trusted HTML</p>');   // Parses as HTML\n$el.addClass('active loading');\n$el.removeClass('loading');\n$el.toggleClass('expanded');\n$el.attr('href', '/page');\n$el.data('productId');             // data-product-id"
+        }
+      ],
+      "toc": [
+        {
+          "id": "dom-manipulation",
+          "text": "DOM Manipulation",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 3
+}

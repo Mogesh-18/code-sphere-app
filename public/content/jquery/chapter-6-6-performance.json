@@ -1,0 +1,28 @@
+{
+  "id": "chapter-6",
+  "slug": "chapter-6-6-performance",
+  "title": "6. Performance",
+  "order": 6,
+  "sections": [
+    {
+      "id": "chapter-6-6-performance-s1",
+      "slug": "6-performance",
+      "title": "6. Performance",
+      "order": 1,
+      "content": [
+        {
+          "type": "code",
+          "language": "javascript",
+          "code": "// Cache selectors\nconst $card = $('#product-1'); // One DOM lookup\n$card.addClass('featured');\n$card.find('.price').text('₹45,000');\n\n// Avoid repeated lookups in loops\nconst $items = $('.item'); // Cache outside loop\n$items.each(function() {\n  $(this).addClass('processed');\n});"
+        }
+      ],
+      "toc": [],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "javascript"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 1
+}

@@ -1,0 +1,281 @@
+{
+  "id": "chapter-2",
+  "slug": "chapter-2-2-core-fundamentals",
+  "title": "2. Core Fundamentals",
+  "order": 2,
+  "sections": [
+    {
+      "id": "chapter-2-2-core-fundamentals-s2",
+      "slug": "document-structure",
+      "title": "Document Structure",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Document Structure",
+          "id": "document-structure"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Every HTML document follows a required base structure:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Page Title</title>\n  </head>\n  <body>\n    <!-- visible content -->\n  </body>\n</html>"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "code",
+                  "value": "<!DOCTYPE html>"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " — Tells the browser to render in standards mode."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "code",
+                  "value": "<html lang=\"en\">"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " — The "
+            },
+            {
+              "type": "code",
+              "value": "lang"
+            },
+            {
+              "type": "text",
+              "value": " attribute is mandatory. It informs screen readers which language to use."
+            }
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "document-structure",
+          "text": "Document Structure",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "html"
+      ]
+    },
+    {
+      "id": "chapter-2-2-core-fundamentals-s3",
+      "slug": "semantic-html",
+      "title": "Semantic HTML",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Semantic HTML",
+          "id": "semantic-html"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Semantic HTML means using elements that convey meaning about the content they contain."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Element",
+            "Purpose",
+            "Use When"
+          ],
+          "rows": [
+            [
+              "<header>",
+              "Page or section header",
+              "Top of page or section"
+            ],
+            [
+              "<nav>",
+              "Navigation links",
+              "Main menu, breadcrumbs"
+            ],
+            [
+              "<main>",
+              "Primary content",
+              "Once per page"
+            ],
+            [
+              "<article>",
+              "Self-contained content",
+              "Blog posts, cards"
+            ],
+            [
+              "<section>",
+              "Themed grouping",
+              "Chapter-like divisions"
+            ],
+            [
+              "<aside>",
+              "Supplementary content",
+              "Sidebars, callouts"
+            ],
+            [
+              "<footer>",
+              "Closing content",
+              "Bottom of page or section"
+            ]
+          ],
+          "align": [
+            null,
+            null,
+            null
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "semantic-html",
+          "text": "Semantic HTML",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": false,
+      "codeLanguages": []
+    },
+    {
+      "id": "chapter-2-2-core-fundamentals-s4",
+      "slug": "headings",
+      "title": "Headings",
+      "order": 4,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Headings",
+          "id": "headings"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Headings establish document outline and hierarchy:"
+            }
+          ]
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<h1>Main Page Topic</h1>\n  <h2>Major Section</h2>\n    <h3>Sub-section</h3>"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Rules:"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Use only one "
+                    },
+                    {
+                      "type": "code",
+                      "value": "<h1>"
+                    },
+                    {
+                      "type": "text",
+                      "value": " per page."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Never skip heading levels."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Use headings for structure, never for styling."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "headings",
+          "text": "Headings",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "html"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 3
+}

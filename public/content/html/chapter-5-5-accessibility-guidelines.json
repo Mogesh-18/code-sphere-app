@@ -1,0 +1,201 @@
+{
+  "id": "chapter-5",
+  "slug": "chapter-5-5-accessibility-guidelines",
+  "title": "5. Accessibility Guidelines",
+  "order": 5,
+  "sections": [
+    {
+      "id": "chapter-5-5-accessibility-guidelines-s2",
+      "slug": "wcag-fundamentals",
+      "title": "WCAG Fundamentals",
+      "order": 2,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "WCAG Fundamentals",
+          "id": "wcag-fundamentals"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "WCAG 2.1 is organised around four principles: "
+            },
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Perceivable, Operable, Understandable, Robust"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " (POUR)."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Conformance levels:"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            {
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "strong",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Level A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " — Minimum. Must be met."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "strong",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Level AA"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " — Standard. Required by most laws."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "strong",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Level AAA"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " — Enhanced. Not required for all content."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "toc": [
+        {
+          "id": "wcag-fundamentals",
+          "text": "WCAG Fundamentals",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": false,
+      "codeLanguages": []
+    },
+    {
+      "id": "chapter-5-5-accessibility-guidelines-s3",
+      "slug": "focus-management",
+      "title": "Focus Management",
+      "order": 3,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Focus Management",
+          "id": "focus-management"
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<!-- Skip navigation link — first element in body -->\n<a href=\"#main-content\" class=\"skip-link\">Skip to main content</a>\n\n<!-- Main content target -->\n<main id=\"main-content\">\n  <!-- content -->\n</main>"
+        }
+      ],
+      "toc": [
+        {
+          "id": "focus-management",
+          "text": "Focus Management",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "html"
+      ]
+    },
+    {
+      "id": "chapter-5-5-accessibility-guidelines-s4",
+      "slug": "accessible-forms",
+      "title": "Accessible Forms",
+      "order": 4,
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Accessible Forms",
+          "id": "accessible-forms"
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "code": "<!-- Error state -->\n<div class=\"form-group\">\n  <label for=\"email\">Email Address</label>\n  <input\n    type=\"email\"\n    id=\"email\"\n    aria-invalid=\"true\"\n    aria-describedby=\"email-error\"\n  />\n  <p id=\"email-error\" role=\"alert\">\n    Please enter a valid email address.\n  </p>\n</div>"
+        }
+      ],
+      "toc": [
+        {
+          "id": "accessible-forms",
+          "text": "Accessible Forms",
+          "level": 2,
+          "children": []
+        }
+      ],
+      "readingTimeMinutes": 1,
+      "hasCodeExamples": true,
+      "codeLanguages": [
+        "html"
+      ]
+    }
+  ],
+  "totalReadingMinutes": 3
+}
